@@ -1,32 +1,52 @@
 {
   "client": "李偲綺",
+  "policy_number": "1680251600",
   "currency": "TWD",
   "accounts": [
     {
-      "account_id": "ACC-01",
-      "name": "主要投資帳戶",
-      "initial_amount": 1000000,
-      "current_balance": 1012500,
-      "total_deductions": 2500,
-      "total_dividends": 15000,
-      "valuation_date": "2026-09-08",
+      "account_id": "1680251600",
+      "name": "李偲綺-保單投資帳戶",
+      "initial_amount": 996721,
+      "cumulative_investment": 1056155,
+      "net_invested_cost": 1040304,
+      "current_balance": 1018039,
+      "total_deductions": 15851,
+      "total_dividends": 59434,
+      "valuation_date": "2026-09-03",
+      "roi_with_dividends": 3.57,
+      "roi_without_dividends": -2.14,
       "status": "active",
       "holdings": [
         {
-          "fund_id": "ALLIANZ_GROWTH",
-          "target_name": "安聯收益成長多重資產基金-AM穩定月配類股(新臺幣)",
-          "units": 98500.000000,
-          "avg_price": 10.1523,
-          "latest_price": 10.2792,
-          "cost_amount": 1000000,
-          "current_valuation": 1012500
+          "fund_id": "PZ023",
+          "target_name": "PZ023 柏瑞ESG量化多重資產基金－B類型（月配息）",
+          "units": 127084.87089,
+          "avg_price": 8.1859,
+          "latest_price": 8.0107,
+          "cost_amount": 1040304,
+          "current_valuation": 1018039,
+          "accumulated_dividends": 59434,
+          "unrealized_gain_loss": -22265,
+          "unrealized_gain_loss_rate": -2.14,
+          "total_return_with_div": 37169,
+          "total_return_with_div_rate": 3.57
         }
-      ]
+      ],
+      "distribution_settings": {
+        "fee_deduction_target": "PZ023 柏瑞ESG量化多重資產基金－B類型（月配息）",
+        "payout_method": "投入其他標的",
+        "target_payout_fund": "YT004 元大全球優質龍頭平衡基金－新台幣 A 類型"
+      }
     }
   ],
-  "total_initial_amount": 1000000,
-  "total_current_valuation": 1012500,
-  "total_deductions": 2500,
-  "total_dividends": 15000,
-  "last_updated": "2026-09-08T18:00:00+08:00"
+  "total_initial_amount": 996721,
+  "total_cumulative_investment": 1056155,
+  "total_net_invested_cost": 1040304,
+  "total_current_valuation": 1018039,
+  "total_deductions": 15851,
+  "total_dividends": 59434,
+  "total_net_profit_with_div": 37169,
+  "total_roi": 3.57,
+  "valuation_date": "2026-09-03",
+  "last_updated": "2026-09-09T07:35:00+08:00"
 }

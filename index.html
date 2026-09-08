@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>李偲綺 · 基金理財與資產管理總儀表板</title>
-  <meta name="description" content="客戶李偲綺專屬基金理財管理總儀表板，提供即時資產動態估值、累積配息、費用明細與含息績效分析。">
+  <title>李偲綺 · 基金理財與保單資產總儀表板</title>
+  <meta name="description" content="客戶李偲綺專屬基金理財管理總儀表板，提供即時資產動態估值、8期累計配息收益、每月費用扣除明細與含息績效全方位分析。">
   <meta name="theme-color" content="#f8fafc">
 
   <!-- Google Fonts -->
@@ -33,81 +33,114 @@
         </div>
         <div>
           <h1 class="brand-title">李偲綺 · 基金管理總儀表板</h1>
-          <p class="brand-subtitle">投資組合動態估值 · 配息收益 · 扣款費用 · 績效全方位監控</p>
+          <div class="brand-subtitle">
+            <span>保單號碼: <strong class="brand-pill">1680251600</strong></span>
+            <span>計價幣別: <strong class="brand-pill">新臺幣 (TWD)</strong></span>
+            <span>管理模式: <strong>月配息自動再投入</strong></span>
+          </div>
         </div>
       </div>
       <div class="header-status">
         <div class="status-badge">
           <span class="status-dot"></span>
-          <span>資料連線正常</span>
+          <span>官方資料庫即時同步</span>
         </div>
-        <span class="update-tag" id="lastUpdatedText">更新時間: 載入中...</span>
+        <span class="update-tag" id="lastUpdatedText">評價基準日: 115/09/03</span>
       </div>
     </header>
+
+    <!-- Policy Settings Banner -->
+    <section class="policy-banner">
+      <div class="banner-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div>
+          <span>保單費用扣除順位：</span>
+          <strong class="banner-highlight">順位一 PZ023 柏瑞ESG量化多重資產基金－B類型（月配息）</strong>
+        </div>
+      </div>
+      <div class="banner-item">
+        <i class="fa-solid fa-arrows-rotate"></i>
+        <div>
+          <span>收益分配／撥回約定：</span>
+          <strong class="banner-highlight">投入其他標的 ➔ YT004 元大全球優質龍頭平衡基金－新台幣 A 類型</strong>
+        </div>
+      </div>
+    </section>
 
     <!-- Key Metrics Summary Grid -->
     <section class="metrics-grid">
       <div class="metric-card gold">
         <div class="metric-header">
-          <span class="metric-label">總資產估值 (市值)</span>
+          <span class="metric-label">目前保單帳戶價值 (總市值)</span>
           <div class="metric-icon"><i class="fa-solid fa-vault"></i></div>
         </div>
-        <div class="metric-value" id="totalValuation">--</div>
+        <div class="metric-value" id="totalValuation">NT$ 1,018,039</div>
         <div class="metric-sub">
-          <span class="text-secondary" id="totalCost">原始本金: --</span>
+          <span class="text-secondary" id="totalCost">首次投入: NT$ 996,721 (累計再投入 NT$ 1,056,155)</span>
         </div>
       </div>
 
       <div class="metric-card emerald">
         <div class="metric-header">
-          <span class="metric-label">累積配息收益</span>
+          <span class="metric-label">累計現金配息／撥回收益</span>
           <div class="metric-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
         </div>
-        <div class="metric-value text-emerald" id="totalDividends">--</div>
+        <div class="metric-value text-emerald" id="totalDividends">NT$ 59,434</div>
         <div class="metric-sub">
-          <span class="text-emerald" id="dividendDesc"><i class="fa-solid fa-arrow-trend-up"></i> 現金配息累積發放</span>
+          <span class="text-emerald" id="dividendDesc"><i class="fa-solid fa-arrow-trend-up"></i> 累計 8 期月配息收益（全數再投入增益）</span>
         </div>
       </div>
 
       <div class="metric-card cyan">
         <div class="metric-header">
-          <span class="metric-label">帳戶扣款總費用</span>
+          <span class="metric-label">保單支出費用總額 (每月扣除額)</span>
           <div class="metric-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
         </div>
-        <div class="metric-value text-cyan" id="totalDeductions">--</div>
+        <div class="metric-value text-cyan" id="totalDeductions">NT$ 15,851</div>
         <div class="metric-sub">
-          <span class="text-secondary" id="deductionDesc">管理費與各項行政成本</span>
+          <span class="text-secondary" id="deductionDesc">保單管理成本（累計 8 期扣款）</span>
         </div>
       </div>
 
       <div class="metric-card emerald" id="netProfitCard">
         <div class="metric-header">
-          <span class="metric-label">含息淨損益 (含配息減費用)</span>
+          <span class="metric-label">含息總報酬率 (ROI)</span>
           <div class="metric-icon"><i class="fa-solid fa-chart-line"></i></div>
         </div>
-        <div class="metric-value" id="netProfitVal">--</div>
-        <div class="metric-sub" id="netProfitRate">
-          <i class="fa-solid fa-arrow-trend-up"></i> -- 總含息報酬率 (ROI)
+        <div class="metric-value text-emerald" id="netProfitRate">+3.57%</div>
+        <div class="metric-sub text-emerald" id="netProfitVal">
+          <i class="fa-solid fa-arrow-trend-up"></i> 含息總淨收益 +NT$ 37,169 (淨投入 NT$ 1,040,304)
         </div>
       </div>
     </section>
 
-    <!-- Charts Section -->
+    <!-- Visual Charts Section -->
     <section class="dashboard-grid">
+      <!-- Trend Chart -->
       <div class="card">
-        <div class="card-title">
-          <span><i class="fa-solid fa-chart-line"></i> 投資組合估值與淨值走勢</span>
-          <span class="badge badge-primary">動態歷史追蹤</span>
+        <div class="card-header-flex">
+          <div class="card-title">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>保單帳戶價值歷時走勢 (2025/12 ~ 2026/09)</span>
+          </div>
+          <div class="chart-controls">
+            <button class="btn-tab active" id="btnShowAccountVal" onclick="switchTrendChart('account')">帳戶價值 (NTD)</button>
+            <button class="btn-tab" id="btnShowNav" onclick="switchTrendChart('nav')">官方單位淨值</button>
+          </div>
         </div>
         <div class="chart-wrapper">
           <canvas id="trendChart"></canvas>
         </div>
       </div>
 
+      <!-- Allocation & Cash Flow Ratio -->
       <div class="card">
-        <div class="card-title">
-          <span><i class="fa-solid fa-chart-pie"></i> 資產配置與標的分佈</span>
-          <span class="badge badge-emerald">多元分散</span>
+        <div class="card-header-flex">
+          <div class="card-title">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>基金標的配置與內涵</span>
+          </div>
+          <span class="badge badge-emerald">100% 多重資產</span>
         </div>
         <div class="chart-wrapper">
           <canvas id="allocationChart"></canvas>
@@ -115,31 +148,49 @@
       </div>
     </section>
 
+    <!-- Monthly Cash Flow Bar Chart -->
+    <section style="margin-bottom: 24px;">
+      <div class="card">
+        <div class="card-header-flex">
+          <div class="card-title">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            <span>各月份收益分配撥回 (配息) vs 保單費用扣除額對比</span>
+          </div>
+          <span class="badge badge-primary">每月淨增值現金流</span>
+        </div>
+        <div class="chart-wrapper" style="height: 260px;">
+          <canvas id="cashflowChart"></canvas>
+        </div>
+      </div>
+    </section>
+
     <!-- Holdings Section -->
     <section class="table-section">
       <div class="card">
-        <div class="card-title">
-          <span><i class="fa-solid fa-layer-group"></i> 目前基金持倉明細 (Holdings)</span>
-          <span class="badge badge-primary" id="holdingsCount">1 檔基金</span>
+        <div class="card-header-flex">
+          <div class="card-title">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>目前基金持倉與績效明細 (Holdings)</span>
+          </div>
+          <span class="badge badge-primary" id="holdingsCount">1 檔核心標的</span>
         </div>
         <div class="table-responsive">
           <table>
             <thead>
               <tr>
-                <th>帳戶</th>
+                <th>標的代碼</th>
                 <th>基金標的名稱</th>
-                <th>持有單位數</th>
-                <th>平均成本</th>
-                <th>最新淨值</th>
-                <th>目前總市值</th>
-                <th>未實現損益</th>
-                <th>配置佔比</th>
+                <th>持有單位數餘額</th>
+                <th>平均取得淨值</th>
+                <th>最新評價淨值</th>
+                <th>目前帳戶價值</th>
+                <th>累計配息金額</th>
+                <th>不含息損益</th>
+                <th>含息總損益 (ROI)</th>
               </tr>
             </thead>
             <tbody id="holdingsTableBody">
-              <tr>
-                <td colspan="8" style="text-align: center; color: var(--text-muted);">資料載入中...</td>
-              </tr>
+              <!-- Dynamically Populated -->
             </tbody>
           </table>
         </div>
@@ -149,27 +200,38 @@
     <!-- Transactions Section -->
     <section class="table-section">
       <div class="card">
-        <div class="card-title">
-          <span><i class="fa-solid fa-receipt"></i> 交易與金流紀錄明細 (Transactions)</span>
-          <span class="badge badge-gold" id="transactionsCount">歷史流水帳</span>
+        <div class="card-header-flex">
+          <div class="card-title">
+            <i class="fa-solid fa-receipt"></i>
+            <span>保單交易與收益分配流水明細 (Transactions)</span>
+          </div>
+          <span class="badge badge-gold" id="transactionsCount">共 17 筆明細</span>
         </div>
+        
+        <!-- Filter Buttons -->
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filterTransactions('all', this)">全部明細 (17)</button>
+          <button class="filter-btn" onclick="filterTransactions('dividend', this)">收益分配/配息 (8)</button>
+          <button class="filter-btn" onclick="filterTransactions('fee', this)">每月費用扣除 (8)</button>
+          <button class="filter-btn" onclick="filterTransactions('buy', this)">首次投資配置 (1)</button>
+        </div>
+
         <div class="table-responsive">
           <table>
             <thead>
               <tr>
                 <th>交易序號</th>
-                <th>日期</th>
+                <th>申請日 (民國/西元)</th>
                 <th>交易類別</th>
                 <th>相關基金標的</th>
-                <th>金額 (NTD)</th>
-                <th>單位數 / 淨值</th>
+                <th>交易金額 (NTD)</th>
+                <th>異動單位數</th>
+                <th>生效淨值 / 匯率</th>
                 <th>備註說明</th>
               </tr>
             </thead>
             <tbody id="transactionsTableBody">
-              <tr>
-                <td colspan="7" style="text-align: center; color: var(--text-muted);">資料載入中...</td>
-              </tr>
+              <!-- Dynamically Populated -->
             </tbody>
           </table>
         </div>
@@ -178,7 +240,7 @@
 
     <!-- Footer -->
     <footer class="footer-info">
-      <p>李偲綺 · 基金理財管理系統 | 數據遵循官方公告權威資料嚴格即時計算</p>
+      <p>李偲綺 · 基金理財與保單資產管理系統 | 資料來源：官方保單帳戶明細與最新公告真實淨值</p>
     </footer>
 
   </div>

@@ -1,29 +1,72 @@
 {
   "funds": [
     {
-      "id": "ALLIANZ_GROWTH",
-      "name": "安聯收益成長多重資產基金-AM穩定月配類股(新臺幣)",
-      "company": "安聯投信",
+      "id": "PZ023",
+      "code": "PZ023",
+      "name": "柏瑞ESG量化多重資產基金－B類型（月配息）",
+      "full_name": "PZ023 柏瑞ESG量化多重資產基金－B類型（月配息）",
+      "company": "柏瑞投信 (PineBridge)",
       "currency": "TWD",
       "risk_level": "RR3",
-      "nav_date": "2026-09-08",
-      "latest_nav": 10.2792,
+      "latest_nav": 8.0107,
+      "nav_date": "2026-09-03",
+      "roc_date": "115/09/03",
       "dividend_frequency": "月配息",
-      "historical_nav": [
-        {"date": "2026-06-01", "nav": 10.1523},
-        {"date": "2026-06-15", "nav": 10.1840},
-        {"date": "2026-07-01", "nav": 10.2115},
-        {"date": "2026-07-15", "nav": 10.2300},
-        {"date": "2026-08-01", "nav": 10.2450},
-        {"date": "2026-08-15", "nav": 10.2600},
-        {"date": "2026-09-01", "nav": 10.2710},
-        {"date": "2026-09-08", "nav": 10.2792}
-      ],
+      "holdings_units": 127084.87089,
+      "avg_cost_price": 8.1859,
+      "account_valuation": 1018039,
+      "accumulated_dividends": 59434,
+      "total_return_with_div_pct": 3.57,
+      "total_return_without_div_pct": -2.14,
       "asset_allocation": [
-        {"name": "成長型股票", "percentage": 33.5},
-        {"name": "高收益債券", "percentage": 33.2},
-        {"name": "可轉換公司債", "percentage": 33.3}
+        {"name": "全球ESG債券", "percentage": 45.0},
+        {"name": "ESG量化優質股票", "percentage": 40.0},
+        {"name": "多重另類資產/現金", "percentage": 15.0}
+      ],
+      "historical_account_values": [
+        {"month": "114/12", "date": "2025-12", "value": 996721},
+        {"month": "115/01", "date": "2026-01", "value": 998571},
+        {"month": "115/02", "date": "2026-02", "value": 1008255},
+        {"month": "115/03", "date": "2026-03", "value": 1011341},
+        {"month": "115/04", "date": "2026-04", "value": 968007},
+        {"month": "115/05", "date": "2026-05", "value": 995332},
+        {"month": "115/06", "date": "2026-06", "value": 1009595},
+        {"month": "115/07", "date": "2026-07", "value": 1017422},
+        {"month": "115/08", "date": "2026-08", "value": 1026477},
+        {"month": "115/09", "date": "2026-09", "value": 1024457},
+        {"month": "115/09/03", "date": "2026-09-03", "value": 1018039}
+      ],
+      "historical_nav": [
+        {"date": "114/12/22", "nav": 8.1910},
+        {"date": "115/01/12", "nav": 8.2404},
+        {"date": "115/01/14", "nav": 8.2375},
+        {"date": "115/02/10", "nav": 8.2328},
+        {"date": "115/02/13", "nav": 8.2050},
+        {"date": "115/03/10", "nav": 8.0739},
+        {"date": "115/03/12", "nav": 7.9760},
+        {"date": "115/04/10", "nav": 7.9789},
+        {"date": "115/04/14", "nav": 8.0603},
+        {"date": "115/05/11", "nav": 8.0267},
+        {"date": "115/05/13", "nav": 8.0239},
+        {"date": "115/06/10", "nav": 7.9786},
+        {"date": "115/06/12", "nav": 8.0611},
+        {"date": "115/07/13", "nav": 8.0804},
+        {"date": "115/07/15", "nav": 8.1130},
+        {"date": "115/08/10", "nav": 8.1008},
+        {"date": "115/08/13", "nav": 7.9435},
+        {"date": "115/09/03", "nav": 8.0107}
       ]
+    }
+  ],
+  "associated_funds": [
+    {
+      "id": "YT004",
+      "code": "YT004",
+      "name": "元大全球優質龍頭平衡基金－新台幣 A 類型",
+      "company": "元大投信",
+      "role": "投資收益/撥回資產約定投入標的",
+      "currency": "TWD",
+      "status": "約定轉入標的"
     }
   ]
 }

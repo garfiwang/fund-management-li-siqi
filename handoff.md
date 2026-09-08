@@ -3,14 +3,14 @@
 > 任何 Agent、任何電腦接手前**必讀**；收工時**必更新**。本檔只放交接必需的精簡資訊，詳細脈絡放 Obsidian（L3）。
 
 ## ⏯️ 目前做到哪
-已依據客戶「Lee」提供的真實保單與基金明細（保單號碼 `1680251600`，標的 `PZ023 柏瑞ESG量化多重資產基金－B類型`），完整建置並上線「Lee · 基金理財與保單資產總儀表板」。
-專案全域（包含儀表板、數據庫、文檔與交接檔）已全面將真實姓名去識別化，統一以代號「Lee」取代。
-所有數據包含 17 筆交易流水、8 期配息收益再投入（NT$ 59,434）、8 期每月費用扣除額（NT$ 15,851）、最新帳戶價值估值（NT$ 1,018,039）、帳戶走勢圖、現金流對比圖與持倉績效明細均已全數動態整合完成。
+已依據客戶「Lee」需求，完成兩檔關鍵基金獨立專屬研究子分頁開發：
+1. [`pinebridge_esg_research.html`](file:///Users/garfiwang/Library/CloudStorage/GoogleDrive-garfiwangdata1@gmail.com/我的雲端硬碟/[Project] 基金管理-李偲綺/pinebridge_esg_research.html)：柏瑞ESG量化多重資產基金－B類型（PZ023），含基本資料、前十大持股債券明細、近30日淨值走勢圖與表、8期歷史配息明細。
+2. [`yuanta_global_leaders_research.html`](file:///Users/garfiwang/Library/CloudStorage/GoogleDrive-garfiwangdata1@gmail.com/我的雲端硬碟/[Project] 基金管理-李偲綺/yuanta_global_leaders_research.html)：元大全球優質龍頭平衡基金－新台幣 A 類型（YT004），含基本資料、前十大持股明細、近30日淨值走勢圖與表、累積型免稅複利機制與B類型月配息對比解析。
+全站各頁面皆具備順暢頂部導航連結，並已全面套用代號「Lee」去識別化。
 
 ## 🚦 目前狀態
-- 儀表板前端與數據庫完全就緒，客戶姓名全面以代號「Lee」隱私化呈現。
-- 支援雙走勢圖切換（保單價值/官方淨值）與交易類別篩選。
-- 遵循數據計算鐵律，所有數值 100% 精確對齊官方保單帳務資料。
+- 總儀表板與兩檔基金子分頁皆已完成開發並相互連結。
+- 遵循數據計算鐵律，所有數值 100% 精確對齊官方真實淨值與月報資料。
 - GitHub 儲存庫 `garfiwang/fund-management-li-siqi` 與 Obsidian 筆記均已同步。
 
 ## ➡️ 下一步

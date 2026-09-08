@@ -1,0 +1,29 @@
+{
+  "funds": [
+    {
+      "id": "ALLIANZ_GROWTH",
+      "name": "安聯收益成長多重資產基金-AM穩定月配類股(新臺幣)",
+      "company": "安聯投信",
+      "currency": "TWD",
+      "risk_level": "RR3",
+      "nav_date": "2026-09-08",
+      "latest_nav": 10.2792,
+      "dividend_frequency": "月配息",
+      "historical_nav": [
+        {"date": "2026-06-01", "nav": 10.1523},
+        {"date": "2026-06-15", "nav": 10.1840},
+        {"date": "2026-07-01", "nav": 10.2115},
+        {"date": "2026-07-15", "nav": 10.2300},
+        {"date": "2026-08-01", "nav": 10.2450},
+        {"date": "2026-08-15", "nav": 10.2600},
+        {"date": "2026-09-01", "nav": 10.2710},
+        {"date": "2026-09-08", "nav": 10.2792}
+      ],
+      "asset_allocation": [
+        {"name": "成長型股票", "percentage": 33.5},
+        {"name": "高收益債券", "percentage": 33.2},
+        {"name": "可轉換公司債", "percentage": 33.3}
+      ]
+    }
+  ]
+}

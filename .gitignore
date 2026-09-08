@@ -1,0 +1,7 @@
+desktop.ini
+*.tmp
+~$*
+.env
+*.key
+credentials.*
+.DS_Store

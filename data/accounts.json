@@ -1,0 +1,32 @@
+{
+  "client": "李偲綺",
+  "currency": "TWD",
+  "accounts": [
+    {
+      "account_id": "ACC-01",
+      "name": "主要投資帳戶",
+      "initial_amount": 1000000,
+      "current_balance": 1012500,
+      "total_deductions": 2500,
+      "total_dividends": 15000,
+      "valuation_date": "2026-09-08",
+      "status": "active",
+      "holdings": [
+        {
+          "fund_id": "ALLIANZ_GROWTH",
+          "target_name": "安聯收益成長多重資產基金-AM穩定月配類股(新臺幣)",
+          "units": 98500.000000,
+          "avg_price": 10.1523,
+          "latest_price": 10.2792,
+          "cost_amount": 1000000,
+          "current_valuation": 1012500
+        }
+      ]
+    }
+  ],
+  "total_initial_amount": 1000000,
+  "total_current_valuation": 1012500,
+  "total_deductions": 2500,
+  "total_dividends": 15000,
+  "last_updated": "2026-09-08T18:00:00+08:00"
+}

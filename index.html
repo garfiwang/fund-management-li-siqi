@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>李偲綺 · 基金理財與資產管理總儀表板</title>
+  <meta name="description" content="客戶李偲綺專屬基金理財管理總儀表板，提供即時資產動態估值、累積配息、費用明細與含息績效分析。">
+  <meta name="theme-color" content="#f8fafc">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Header Navigation -->
+    <header class="header-nav">
+      <div class="brand-section">
+        <div class="brand-icon">
+          <i class="fa-solid fa-chart-pie"></i>
+        </div>
+        <div>
+          <h1 class="brand-title">李偲綺 · 基金管理總儀表板</h1>
+          <p class="brand-subtitle">投資組合動態估值 · 配息收益 · 扣款費用 · 績效全方位監控</p>
+        </div>
+      </div>
+      <div class="header-status">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>資料連線正常</span>
+        </div>
+        <span class="update-tag" id="lastUpdatedText">更新時間: 載入中...</span>
+      </div>
+    </header>
+
+    <!-- Key Metrics Summary Grid -->
+    <section class="metrics-grid">
+      <div class="metric-card gold">
+        <div class="metric-header">
+          <span class="metric-label">總資產估值 (市值)</span>
+          <div class="metric-icon"><i class="fa-solid fa-vault"></i></div>
+        </div>
+        <div class="metric-value" id="totalValuation">--</div>
+        <div class="metric-sub">
+          <span class="text-secondary" id="totalCost">原始本金: --</span>
+        </div>
+      </div>
+
+      <div class="metric-card emerald">
+        <div class="metric-header">
+          <span class="metric-label">累積配息收益</span>
+          <div class="metric-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+        </div>
+        <div class="metric-value text-emerald" id="totalDividends">--</div>
+        <div class="metric-sub">
+          <span class="text-emerald" id="dividendDesc"><i class="fa-solid fa-arrow-trend-up"></i> 現金配息累積發放</span>
+        </div>
+      </div>
+
+      <div class="metric-card cyan">
+        <div class="metric-header">
+          <span class="metric-label">帳戶扣款總費用</span>
+          <div class="metric-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        </div>
+        <div class="metric-value text-cyan" id="totalDeductions">--</div>
+        <div class="metric-sub">
+          <span class="text-secondary" id="deductionDesc">管理費與各項行政成本</span>
+        </div>
+      </div>
+
+      <div class="metric-card emerald" id="netProfitCard">
+        <div class="metric-header">
+          <span class="metric-label">含息淨損益 (含配息減費用)</span>
+          <div class="metric-icon"><i class="fa-solid fa-chart-line"></i></div>
+        </div>
+        <div class="metric-value" id="netProfitVal">--</div>
+        <div class="metric-sub" id="netProfitRate">
+          <i class="fa-solid fa-arrow-trend-up"></i> -- 總含息報酬率 (ROI)
+        </div>
+      </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="dashboard-grid">
+      <div class="card">
+        <div class="card-title">
+          <span><i class="fa-solid fa-chart-line"></i> 投資組合估值與淨值走勢</span>
+          <span class="badge badge-primary">動態歷史追蹤</span>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="trendChart"></canvas>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span><i class="fa-solid fa-chart-pie"></i> 資產配置與標的分佈</span>
+          <span class="badge badge-emerald">多元分散</span>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="allocationChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Holdings Section -->
+    <section class="table-section">
+      <div class="card">
+        <div class="card-title">
+          <span><i class="fa-solid fa-layer-group"></i> 目前基金持倉明細 (Holdings)</span>
+          <span class="badge badge-primary" id="holdingsCount">1 檔基金</span>
+        </div>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>帳戶</th>
+                <th>基金標的名稱</th>
+                <th>持有單位數</th>
+                <th>平均成本</th>
+                <th>最新淨值</th>
+                <th>目前總市值</th>
+                <th>未實現損益</th>
+                <th>配置佔比</th>
+              </tr>
+            </thead>
+            <tbody id="holdingsTableBody">
+              <tr>
+                <td colspan="8" style="text-align: center; color: var(--text-muted);">資料載入中...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transactions Section -->
+    <section class="table-section">
+      <div class="card">
+        <div class="card-title">
+          <span><i class="fa-solid fa-receipt"></i> 交易與金流紀錄明細 (Transactions)</span>
+          <span class="badge badge-gold" id="transactionsCount">歷史流水帳</span>
+        </div>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>交易序號</th>
+                <th>日期</th>
+                <th>交易類別</th>
+                <th>相關基金標的</th>
+                <th>金額 (NTD)</th>
+                <th>單位數 / 淨值</th>
+                <th>備註說明</th>
+              </tr>
+            </thead>
+            <tbody id="transactionsTableBody">
+              <tr>
+                <td colspan="7" style="text-align: center; color: var(--text-muted);">資料載入中...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-info">
+      <p>李偲綺 · 基金理財管理系統 | 數據遵循官方公告權威資料嚴格即時計算</p>
+    </footer>
+
+  </div>
+
+  <!-- Main Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,11 +1,11 @@
 {
-  "client": "李偲綺",
+  "client": "Lee",
   "policy_number": "1680251600",
   "currency": "TWD",
   "accounts": [
     {
       "account_id": "1680251600",
-      "name": "李偲綺-保單投資帳戶",
+      "name": "Lee-保單投資帳戶",
       "initial_amount": 996721,
       "cumulative_investment": 1056155,
       "net_invested_cost": 1040304,

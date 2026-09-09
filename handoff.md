@@ -10,6 +10,7 @@
 
 ## 🚦 目前狀態
 - 總儀表板與兩檔基金子分頁皆已完成開發並相互連結。
+- 已成功發布上線至 GitHub Pages：`https://garfiwang.github.io/fund-management-li-siqi/`
 - 遵循數據計算鐵律，所有數值 100% 精確對齊官方真實淨值與月報資料。
 - GitHub 儲存庫 `garfiwang/fund-management-li-siqi` 與 Obsidian 筆記均已同步。
 
@@ -23,6 +24,7 @@
 - Google Drive 桌面版請確認同步狀態良好。
 
 ## 🕐 最後更新
-- 時間：2026-09-09 07:42
+- 時間：2026-09-09 08:15
 - 更新者：Antigravity @ Mac
 - Git push：✅ 已推（garfiwang/fund-management-li-siqi）
+- 線上發布：✅ [https://garfiwang.github.io/fund-management-li-siqi/](https://garfiwang.github.io/fund-management-li-siqi/)

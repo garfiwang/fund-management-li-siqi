@@ -52,7 +52,7 @@
 | 層級 | 平台 | 位置 | 讀取時機 |
 |------|------|------|---------|
 | L1 | 本地（GDrive） | `AGENTS.md`＋`handoff.md` | 每個 session |
-| L2 | GitHub | `garfiwang/fund-management-li-siqi` | 指定時 |
+| L2 | GitHub | [garfiwang/fund-management-li-siqi](https://github.com/garfiwang/fund-management-li-siqi)（[線上發布 Pages](https://garfiwang.github.io/fund-management-li-siqi/)） | 指定時 |
 | L3 | Obsidian | `/Users/garfiwang/Documents/Obsidian/[Project] 基金管理-Lee/專案工作流程.md` | 有需要時 |
 
 ## 工作約定與數據驗證鐵律
